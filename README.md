@@ -1,20 +1,20 @@
-# NFT Generator
+# NFT Art Generator
 
-This project is an open-source NFT generator that allows users to create NFTs once the code is set up. It is designed to be easy to use and extend.
+This project is an open-source NFT art generator that allows users to create NFTs with customizable attributes. It is designed to be easy to use and extend.
 
 ## Features
 
 - Generate NFTs with customizable attributes
-- Interact with blockchain networks
 - Easily extendable for additional features
+- Supports art generation from a collection
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/nft-generator.git
-   cd nft-generator
+   git clone https://github.com/0xGF/nft-art-generator.git
+   cd nft-art-generator
    ```
 
 2. Install dependencies:
@@ -24,19 +24,52 @@ This project is an open-source NFT generator that allows users to create NFTs on
 
 ## Usage
 
-1. Configure your environment variables in a `.env` file:
+1. **Modify Configuration**: Customize your NFT attributes by modifying the `src/config/config.ts` file. Refer to the `examples/example-config.ts` file for guidance.
 
-   ```
-   INFURA_PROJECT_ID=your_infura_project_id
-   WALLET_PRIVATE_KEY=your_wallet_private_key
-   ```
+2. **Build the Project**: Compile the TypeScript files to JavaScript.
 
-2. Modify the `examples/example-config.js` file to customize your NFT attributes.
-
-3. Run the generator:
    ```bash
-   node generate.js
+   npm run build
    ```
+
+3. **Generate Collection**: Run the script to generate a collection of attributes.
+
+   ```bash
+   npm run generate-collection
+   ```
+
+4. **Generate Assets**: Use the generated collection to create NFT assets.
+
+   ```bash
+   npm run generate-assets
+   ```
+
+5. **Run Playground**: Experiment with different configurations and test your setup.
+
+   ```bash
+   npm run playground
+   ```
+
+6. **Start the Generator**: Run the main generator script.
+   ```bash
+   npm run start
+   ```
+
+## Testing
+
+To run tests, ensure you have a testing framework set up (e.g., Jest). You can add a test script in your `package.json` and run it:
+
+```json
+"scripts": {
+  "test": "jest"
+}
+```
+
+Then execute:
+
+```bash
+npm test
+```
 
 ## Example
 
