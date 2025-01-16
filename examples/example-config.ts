@@ -5,8 +5,8 @@ export const config: Config = {
   name: "Sample NFT Collection",
   description: "A sample configuration for NFT generation",
   format: {
-    height: 512,
-    width: 512,
+    height: 1000,
+    width: 1000,
   },
   // Rules for generating the NFT metadata. If you want to exclude a layer, you can do so here by specifying the valueIdToRule. For example for the blue background, we want to exclude the blue clothing layer.
   generationRules: {
@@ -29,6 +29,7 @@ export const config: Config = {
   layers: {
     background: {
       info: {
+        // Skip frequency is the percentage of the time the layer will be skipped.
         skipFrequency: 0,
         id: "background",
         name: "Background",
@@ -37,6 +38,7 @@ export const config: Config = {
         blue: {
           id: "blue",
           name: "Blue",
+          // Relative frequency is the percentage of the time the layer will be generated relative to the other layers.
           relativeFrequency: 5,
         },
         green: {
